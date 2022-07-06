@@ -1,4 +1,5 @@
 const container = document.querySelector('#container');
+const stuff = document.getElementsByClassName("content");
 
 var i = 0;
 
@@ -26,3 +27,11 @@ while(i < 25){
        
     i++;
 }
+
+document.getElementById('clearDrawing').addEventListener("click", function(){
+
+    for (var i = 0; i < stuff.length; i++) {
+        stuff[i].style.backgroundColor = "bisque";
+    }
+
+})
