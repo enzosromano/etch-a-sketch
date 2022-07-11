@@ -1,5 +1,6 @@
 const container = document.querySelector('#container');
 const stuff = document.getElementsByClassName("content");
+const slider = document.getElementById("slider");
 
 initializeGridLayout();
 
@@ -30,6 +31,8 @@ function initializeGridLayout() {
            
         i++;
     }
+
+    console.log(slider.value);
 
 }
 

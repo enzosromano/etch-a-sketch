@@ -9,8 +9,6 @@
 
 <body>
 
-  <script> initial </script>
-
     <div class="header">
       <div>Etch-a-sketch</div>
     </div>
@@ -19,9 +17,14 @@
 
         <div class="userMenu">
 
-          <button id="clearDrawing">Clear</button>
+          <h1>Grid Size</h1>
 
-          <input type="range" min="1" max="100" value="50" class="slider">
+          <div id="gridField">50</div>
+
+          <input type="range" min="1" max="100" value="50" id="slider" 
+            oninput="gridField.innerHTML = slider.value">
+
+          <button id="clearDrawing">Clear</button>
 
         </div>
 
