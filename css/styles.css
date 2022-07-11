@@ -1,3 +1,7 @@
+body {
+    margin: 0;
+}
+
 @media only screen and (max-width: 850px) {
     body {
         height: 100%;
@@ -6,6 +10,7 @@
 
   }
 
+
 .header {
     display: flex;
     flex-direction: column;
@@ -13,7 +18,11 @@
     align-items: center;
     text-align: center;
 
-    font-size: larger;
+    font-size: 40px;
+    font-weight: bolder;
+
+    height: 10vh;
+    width: 100%;
 }
 
 .interface {
@@ -58,5 +67,11 @@
 button {
     height: 50px;
     width: 100px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
