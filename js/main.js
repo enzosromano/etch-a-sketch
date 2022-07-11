@@ -1,11 +1,11 @@
 const container = document.querySelector('#container');
 const stuff = document.getElementsByClassName("content");
 
-var i = 0;
-
 initializeGridLayout();
 
 function initializeGridLayout() {
+
+    var i = 0;
 
     while(i < 100){
         const content = document.createElement('div')

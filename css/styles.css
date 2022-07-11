@@ -16,14 +16,23 @@
     font-size: larger;
 }
 
+.interface {
+    display: flex;
+    gap: 2vw;
+}
+
 #container {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
+
+    height: 8vh;
+    width: 75vw;
 }
 
 .content {
     background-color: bisque;
-    height: 10vh;
+    height: 5vh;
+    width: auto;
     text-align: center;
     vertical-align: middle;
 }
