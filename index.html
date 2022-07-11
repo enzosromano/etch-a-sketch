@@ -19,10 +19,10 @@
 
           <h1>Grid Size</h1>
 
-          <div id="gridField">50</div>
+          <div id="gridSizeField">10x10</div>
 
-          <input type="range" min="1" max="100" value="50" id="slider" 
-            oninput="gridField.innerHTML = slider.value">
+          <input type="range" min="1" max="64" value="10" id="slider" 
+            oninput="gridSizeField.innerHTML = slider.value + 'x' + slider.value">
 
           <button id="clearDrawing">Clear</button>
 

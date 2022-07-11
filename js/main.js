@@ -2,13 +2,15 @@ const container = document.querySelector('#container');
 const stuff = document.getElementsByClassName("content");
 const slider = document.getElementById("slider");
 
-initializeGridLayout();
+initializeGridLayout(slider.value);
 
-function initializeGridLayout() {
+function initializeGridLayout(gridSize) {
+
+    document.documentElement.style.setProperty('--gridSize', gridSize);
 
     var i = 0;
 
-    while(i < 100){
+    while(i < gridSize * gridSize){
         const content = document.createElement('div')
         content.classList.add('content');
         container.appendChild(content);
@@ -32,8 +34,12 @@ function initializeGridLayout() {
         i++;
     }
 
-    console.log(slider.value);
+}
 
+function removeAllChildNodes(parent) {
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
+    }
 }
 
 document.getElementById('clearDrawing').addEventListener("click", function(){
@@ -41,5 +47,15 @@ document.getElementById('clearDrawing').addEventListener("click", function(){
     for (var i = 0; i < stuff.length; i++) {
         stuff[i].style.backgroundColor = "bisque";
     }
+
+})
+
+slider.addEventListener("input", function(){
+
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
+
+    initializeGridLayout(slider.value);
 
 })
