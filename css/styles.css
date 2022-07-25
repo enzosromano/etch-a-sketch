@@ -27,18 +27,21 @@ body {
 
     display: flex;
     flex-direction: column;
-    gap: 2vw;
 
     height: 90vh;
     width: 60vw;
 
     background-color: #d62d3e;
     margin: 12px 12px 12px 12px;
-    border-radius: 12px;
+    border-radius: 25px;
 
     justify-content: center;
     align-items: center;
 
+}
+
+.heading {
+    font-size: 45px;
 }
 
 #canvas {
@@ -47,7 +50,7 @@ body {
 
     margin: 10px 10px 12px 10px;
     height: 80%;
-    width: 85%;
+    width: 75%;
 }
 
 .content {
