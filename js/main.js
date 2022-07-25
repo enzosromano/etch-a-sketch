@@ -1,4 +1,4 @@
-const container = document.querySelector('#container');
+const container = document.querySelector('#canvas');
 const stuff = document.getElementsByClassName("content");
 const slider = document.getElementById("slider");
 

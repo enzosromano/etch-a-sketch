@@ -20,34 +20,26 @@ body {
 
   }
 
+.interface {
 
-.header {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
-    font-size: 40px;
-    font-weight: bolder;
-
-    height: 10vh;
-    width: 100%;
-}
-
-.interface {
-    display: flex;
     gap: 2vw;
 
+    height: 90vh;
+    width: 90vw;
+
+    background-color: #d62d3e;
+    margin: 12px 120px 12px 120px;
+    border-radius: 12px;
+
     justify-content: center;
     align-items: center;
 
-    /*border: 10px solid black;*/
 }
 
 .userMenu {
     display: flex;
-    flex-direction: column;
 
     justify-content: center;
     align-items: center;
@@ -57,12 +49,13 @@ body {
     gap: 15px;
 }
 
-#container {
+#canvas {
     display: grid;
     grid-template-columns: repeat(var(--gridSize), 1fr);
 
-    height: 25vw;
-    width: 25vw;
+    margin: 50px 10px 12px 10px;
+    height: 80%;
+    width: 85%;
 }
 
 .content {
