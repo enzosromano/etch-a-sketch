@@ -15,18 +15,34 @@
 
       <div id="canvas"></div>
 
-        <div class="userMenu">
+      <div class="userMenu">
 
-          <h1>Grid Size</h1>
+        <div class="sizeOptions">
 
-          <div id="gridSizeField">10x10</div>
+          <div class="text">Grid Size:</div>
 
-          <input type="range" min="1" max="64" value="10" id="slider" 
+          <div class="sliderArea">
+
+            <div id="gridSizeField">10x10</div>
+
+            <input type="range" min="1" max="64" value="10" id="slider" 
             oninput="gridSizeField.innerHTML = slider.value + 'x' + slider.value">
+
+          </div>
 
           <button id="clearDrawing">Clear</button>
 
         </div>
+
+        <div class="colorOptions">
+
+          <button>Color 1</button>
+          <button>Color 2</button>
+          <button>Color 3</button>
+
+        </div>
+
+      </div>
 
     </div>
 

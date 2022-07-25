@@ -45,7 +45,7 @@ function removeAllChildNodes(parent) {
 document.getElementById('clearDrawing').addEventListener("click", function(){
 
     for (var i = 0; i < stuff.length; i++) {
-        stuff[i].style.backgroundColor = "bisque";
+        stuff[i].style.backgroundColor = "white";
     }
 
 })
