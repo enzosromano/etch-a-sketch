@@ -69,15 +69,29 @@ body {
 }
 
 .sizeOptions{
+
     display: flex;
     gap: 10px;
+
+    margin: 10px;
+
 }
-
-
 
 button {
     height: 50px;
     width: 100px;
+}
+
+#gridHelperText {
+    font-size: 40px;
+}
+
+.sliderArea {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
 }
 
 .footer {
