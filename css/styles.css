@@ -108,6 +108,10 @@ body {
 button {
     height: 50px;
     width: 100px;
+    font-family: 'Ceviche One';
+    font-size: larger;
+
+    border-radius: 12px;
 }
 
 #gridHelperText {
