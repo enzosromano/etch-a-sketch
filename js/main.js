@@ -39,8 +39,6 @@ function initializeGridLayout(gridSize, colorSetting) {
 
 function colorFunctionality(colorMode){
 
-    console.log(colorMode);
-
     if(colorMode == "gray"){
         return "gray";
     }
@@ -48,7 +46,8 @@ function colorFunctionality(colorMode){
         return "black";
     }
     else{
-        var colors = ['red', 'green', 'blue', 'orange', 'yellow'];
+        /*var colors = ['red', 'green', 'blue', 'orange', 'yellow'];*/
+        var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
         return colors[Math.floor(Math.random() * colors.length)];
     }
 
