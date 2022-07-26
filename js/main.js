@@ -19,14 +19,14 @@ function initializeGridLayout(gridSize) {
             if(event.buttons == 1) {
              event.preventDefault();
            
-             content.style.backgroundColor = "grey";
+             content.style.backgroundColor = "#adadad";
            
             }
            });
     
         content.addEventListener('mousedown', function(event) {
     
-             content.style.backgroundColor = "grey";
+             content.style.backgroundColor = "#adadad";
            
            });
     
