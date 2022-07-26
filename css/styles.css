@@ -31,14 +31,17 @@ body {
     height: 90vh;
     width: 60vw;
 
-    background-color: #d62d3e;
+    background-color: #eb0f0e;
     margin: 12px 12px 12px 12px;
+    border: 2px solid black;
     border-radius: 25px;
+    box-shadow: 12px 2px 2px 1px rgba(0, 0, 0, 0.2);
 
     justify-content: center;
     align-items: center;
 
 }
+
 
 .heading {
     font-size: 45px;
@@ -63,12 +66,25 @@ body {
 
 .userMenu {
 
+    width: 100%;
+
     display: flex;
-
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    gap: 150px;
+    gap: 1px;
 
+}
+
+.circle{
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    border:1px solid black;
+    line-height: 65px;
+    text-align: center;
+    background-color: white;
+
+    margin: 0px 0px 20px 0px;
 }
 
 .sizeOptions{
