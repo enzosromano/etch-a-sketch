@@ -39,18 +39,54 @@ function initializeGridLayout(gridSize, colorSetting) {
 
 function colorFunctionality(colorMode){
 
-    if(colorMode == "gray"){
-        return "gray";
-    }
-    else if(colorMode == "black"){
-        return "black";
-    }
-    else{
-        /*var colors = ['red', 'green', 'blue', 'orange', 'yellow'];*/
+    if(colorMode == "rainbow"){
         var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
         return colors[Math.floor(Math.random() * colors.length)];
     }
+    else{
+        return colorMode;
+    }
 
+}
+
+function colorIn(myBox, colorMode){
+
+    if(colorMode == "rainbow"){
+        var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+        myBox.style.backgroundColor = (colors[Math.floor(Math.random() * colors.length)]);
+    }
+    else if(colorMode == "gray"){
+        myBox.style.backgroundColor = "gray";
+    }
+    else if(colorMode == "black"){
+        myBox.style.backgroundColor = "black";
+    }
+    else{
+        myBox.style.backgroundColor = "white";
+    }
+}
+
+function changeColor(colorMode){
+
+    for (let i = 0; i < stuff.length; i++) {
+
+        stuff[i].removeEventListener;
+
+        stuff[i].addEventListener('mousedown', function(event) {
+            colorIn(stuff[i], colorMode);
+        });
+
+        stuff[i].addEventListener('mousemove', function(event) {
+
+            if(event.buttons == 1) {
+                event.preventDefault();
+              
+                colorIn(stuff[i], colorMode);;
+              
+               }
+
+        });
+    }
 }
 
 function removeAllChildNodes(parent) {
@@ -60,46 +96,31 @@ function removeAllChildNodes(parent) {
 }
 
 document.getElementById('clearDrawing').addEventListener("click", function(){
-
     for (var i = 0; i < stuff.length; i++) {
         stuff[i].style.backgroundColor = "white";
     }
-
 })
 
 document.getElementById('standardMode').addEventListener("click", function(){
-
-    while (container.firstChild) {
-        container.removeChild(container.firstChild);
-    }
-    initializeGridLayout(slider.value, "gray");
-
+    changeColor("gray");
 })
 
 document.getElementById('blackMode').addEventListener("click", function(){
-
-    while (container.firstChild) {
-        container.removeChild(container.firstChild);
-    }
-    initializeGridLayout(slider.value, "black");
-
+    changeColor("black");
 })
 
 document.getElementById('colorMode').addEventListener("click", function(){
+    changeColor("rainbow");
+})
 
-    while (container.firstChild) {
-        container.removeChild(container.firstChild);
-    }
-    initializeGridLayout(slider.value, "rainbow");
-
+document.getElementById('eraserMode').addEventListener("click", function(){
+    changeColor("white");
 })
 
 slider.addEventListener("input", function(){
-
     while (container.firstChild) {
         container.removeChild(container.firstChild);
     }
 
     initializeGridLayout(slider.value);
-
 })
